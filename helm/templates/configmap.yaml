@@ -1,0 +1,4 @@
+apiVersion: v1
+data:
+  version: { { .Values.configmapData.version } }
+kind: ConfigMap

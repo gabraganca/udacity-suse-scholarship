@@ -1,0 +1,9 @@
+apiVersion: v1
+name: ngiinx-alpine-helm
+description: deploy nginx
+keywords:
+- nginx
+version: 3.7.0
+maintainers:
+- name: gbraganca
+  email: ga.braganca@gmail.com
