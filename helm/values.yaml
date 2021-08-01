@@ -20,4 +20,4 @@ service:
   port: 8111
 
 configmapData:
-  verion: alpine
+  version: alpine
