@@ -2,9 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx
-  namespace: { { .Values.namespace.name } }
+  namespace: {{ .Values.namespace.name }}
 spec:
-  replicas: { { .Values.replicaCount } }
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: nginx
@@ -17,13 +17,13 @@ spec:
     metadata:
       labels:
         app: nginx
-        tag: { { .Values.image.tag } }
+        tag: {{ .Values.image.tag }}
     spec:
       containers:
-        - image: { { .Values.image.repository } }
-          imagePullPolicy: { { .Values.image.pullPolicy } }
+        - image: {{ .Values.image.repository }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
           name: nginx
           resources:
             limits:
-              cpu: { { .Values.resources.cpu } }
-              memory: { { .Values.resources.memory } }
+              cpu: {{ .Values.resources.cpu }}
+              memory: {{ .Values.resources.memory }}
